@@ -261,3 +261,6 @@ D:\SE\Projects\xpense-app\Xpense App\Xpense App\bin\Debug\net6.0\runtimes\unix\l
 D:\SE\Projects\xpense-app\Xpense App\Xpense App\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\SE\Projects\xpense-app\Xpense App\Xpense App\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\SE\Projects\xpense-app\Xpense App\Xpense App\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\SE\Projects\xpense-app\Xpense App\Xpense App\bin\Debug\net6.0\Syncfusion.EJ2.dll
+D:\SE\Projects\xpense-app\Xpense App\Xpense App\bin\Debug\net6.0\Syncfusion.Licensing.dll
+D:\SE\Projects\xpense-app\Xpense App\Xpense App\obj\Debug\net6.0\Xpense App.MvcApplicationPartsAssemblyInfo.cs
