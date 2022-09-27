@@ -24,6 +24,57 @@ namespace Xpense_App.Controllers
               return View(await _context.Categories.ToListAsync());
         }
 
+        // GET: Category/AddOrEdit
+        public IActionResult AddOrEdit(int id = 0)
+        {
+            if (id == 0)
+
+                return View(new Category());
+            else
+                return View(_context.Categories.Find(id));
+        }
+
+        // POST: Category/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddOrEdit([Bind("CategoryId,Title,Icon,Type")] Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                if (category.CategoryId == 0)
+                    _context.Add(category);
+                else
+                    _context.Update(category);
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(category);
+        }
+
+        // POST: Category/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            if (_context.Categories == null)
+            {
+                return Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
+            }
+            var category = await _context.Categories.FindAsync(id);
+            if (category != null)
+            {
+                _context.Categories.Remove(category);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        /*
+        
         // GET: Category/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -40,29 +91,7 @@ namespace Xpense_App.Controllers
             }
 
             return View(category);
-        }
-
-        // GET: Category/Create
-        public IActionResult Create()
-        {
-            return View(new Category());
-        }
-
-        // POST: Category/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryId,Title,Icon,Type")] Category category)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(category);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(category);
-        }
+        } 
 
         // GET: Category/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -114,7 +143,7 @@ namespace Xpense_App.Controllers
             }
             return View(category);
         }
-
+    
         // GET: Category/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -133,28 +162,12 @@ namespace Xpense_App.Controllers
             return View(category);
         }
 
-        // POST: Category/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Categories == null)
-            {
-                return Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
-            }
-            var category = await _context.Categories.FindAsync(id);
-            if (category != null)
-            {
-                _context.Categories.Remove(category);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool CategoryExists(int id)
+                private bool CategoryExists(int id)
         {
           return _context.Categories.Any(e => e.CategoryId == id);
         }
+    */
+
+
     }
 }
