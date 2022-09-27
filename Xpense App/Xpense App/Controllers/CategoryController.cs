@@ -42,8 +42,8 @@ namespace Xpense_App.Controllers
             return View(category);
         }
 
-        // GET: Category/Create
-        public IActionResult Create()
+        // GET: Category/AddOrEdit
+        public IActionResult AddOrEdit()
         {
             return View(new Category());
         }
@@ -53,7 +53,7 @@ namespace Xpense_App.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryId,Title,Icon,Type")] Category category)
+        public async Task<IActionResult> AddOrEdit([Bind("CategoryId,Title,Icon,Type")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -63,7 +63,7 @@ namespace Xpense_App.Controllers
             }
             return View(category);
         }
-
+        /*
         // GET: Category/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -114,7 +114,7 @@ namespace Xpense_App.Controllers
             }
             return View(category);
         }
-
+        */
         // GET: Category/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
