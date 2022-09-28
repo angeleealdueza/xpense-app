@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tvqbHFVBsJF2MM1jjMA8njuQUGA28DyeO25VYsN8h+s=",
+  "Hash": "0PwHHY86tFVptSEF0oHCzP12mqcGJ27oEc8Bi1EF58g=",
   "Source": "Xpense App",
   "BasePath": "_content/Xpense App",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\SE\\Projects\\xpense-app\\Xpense App\\Xpense App\\wwwroot\\favicon-16x16.png",
+      "SourceId": "Xpense App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SE\\Projects\\xpense-app\\Xpense App\\Xpense App\\wwwroot\\",
+      "BasePath": "_content/Xpense App",
+      "RelativePath": "favicon-16x16.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon-16x16.png"
+    },
+    {
+      "Identity": "D:\\SE\\Projects\\xpense-app\\Xpense App\\Xpense App\\wwwroot\\favicon-32x32.png",
+      "SourceId": "Xpense App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SE\\Projects\\xpense-app\\Xpense App\\Xpense App\\wwwroot\\",
+      "BasePath": "_content/Xpense App",
+      "RelativePath": "favicon-32x32.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon-32x32.png"
     },
     {
       "Identity": "D:\\SE\\Projects\\xpense-app\\Xpense App\\Xpense App\\wwwroot\\js\\site.js",
