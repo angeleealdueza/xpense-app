@@ -29,7 +29,7 @@ namespace Xpense_App.Controllers
         public IActionResult AddOrEdit()
         {
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId");
-            return View();
+            return View(new Transaction());
         }
 
         // POST: Transaction/AddOrEdit
