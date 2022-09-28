@@ -47,9 +47,13 @@
                                <div class="flex-grow-1">
                                    <h3 class="fw-bold">@ViewData["PageTitle"]</h3>
                                </div>
-                               
-                               <div>
-
+                                <div>
+                                    @if (ViewData["PageActionText"] != null)
+                                    {
+                                        <a class="btn btn-success" href="@ViewData["PageActionUrl"]">
+                                            @ViewData["PageActionText"]
+                                        </a>
+                                    }
                                </div>
                            </div>
                            @*breadcrumb*@
