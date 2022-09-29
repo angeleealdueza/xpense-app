@@ -52,8 +52,9 @@ namespace Xpense_App.Controllers
                     categoryTitleWithIcon = k.First().Category.Icon + " " + k.First().Category.Title,
                     amount = k.Sum(j => j.Amount),
                     formattedAmount = k.Sum(j => j.Amount).ToString("C0")
-                });
-
+                })
+                .OrderByDescending(l=>l.amount)
+                .ToList();
 
             return View();
         }
