@@ -30,6 +30,12 @@ namespace Xpense_App.Controllers
                 .Sum(j => j.Amount);
             ViewBag.TotalIncome = TotalIncome.ToString("C0");
 
+            //Total Expense
+            int TotalExpense = SelectedTransactions
+                .Where(i => i.Category.Type == "Expense")
+                .Sum(j => j.Amount);
+            ViewBag.TotalExpense = TotalExpense.ToString("C0");
+
             return View();
         }
     }
