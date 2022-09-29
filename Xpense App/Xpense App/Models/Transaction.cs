@@ -9,7 +9,7 @@ namespace Xpense_App.Models
         public int TransactionId { get; set; }
 
         public int CategoryId { get; set; }
-        public Category Category { get; set; }  //Navigational property
+        public Category? Category { get; set; }  //Navigational property
 
         public int Amount { get; set; }
 
