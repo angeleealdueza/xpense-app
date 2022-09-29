@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using Xpense_App.Models;
 
 namespace Xpense_App.Controllers
@@ -38,7 +39,9 @@ namespace Xpense_App.Controllers
 
             //Balance
             int Balance = TotalIncome - TotalExpense;
-            ViewBag.Balance = Balance.ToString("C0");
+            CultureInfo cultureInfo = CultureInfo.CreateSpecificCulture("en-US");
+            cultureInfo.NumberFormat.CurrencyNegativePattern = 1;
+            ViewBag.Balance = String.Format(cultureInfo, "{0:C0}", Balance);
 
             return View();
         }
