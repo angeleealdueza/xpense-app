@@ -68,6 +68,19 @@ namespace Xpense_App.Controllers
                 })
                 .ToList();
 
+            //Expense
+            List<SpLineChartData> ExpenseSummary = SelectedTransactions
+                .Where(i => i.Category.Type == "Expense")
+                .GroupBy(j => j.Date)
+                .Select(k => new SpLineChartData()
+                {
+                    day = k.First().Date.ToString("dd-MMM"),
+                    expense = k.Sum(l => l.Amount)
+                })
+                .ToList();
+
+            
+
             return View();
         }
     }
