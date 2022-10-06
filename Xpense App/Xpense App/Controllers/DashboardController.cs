@@ -56,7 +56,26 @@ namespace Xpense_App.Controllers
                 .OrderByDescending(l=>l.amount)
                 .ToList();
 
+            //Spline Chart - TotalIncome vs Expense
+            //Income
+            List<SpLineChartData> IncomeSummary = SelectedTransactions
+                .Where(i => i.Category.Type == "Income")
+                .GroupBy(j => j.Date)
+                .Select(k => new SpLineChartData()
+                {
+                    day = k.First().Date.ToString("dd-MMM"),
+                    income = k.Sum(l => l.Amount)
+                })
+                .ToList();
+
             return View();
         }
+    }
+
+    public class SpLineChartData
+    {
+        public string day;
+        public int income;
+        public int expense;
     }
 }
