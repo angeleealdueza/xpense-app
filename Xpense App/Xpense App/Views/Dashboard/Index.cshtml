@@ -16,7 +16,7 @@
             <div class="d-flex flex-column m-auto py-3">
                 <span class="lead">Total Income</span>
                 <h1 class="display-6 fw-bold">@ViewBag.TotalIncome</h1>
-            </div> 
+            </div>
         </div>
     </div>
 
@@ -77,7 +77,7 @@
                 <h5 class="fw-bold">Income vs Expense</h5>
             </div>
             <ejs-chart id="spline-chart" background="#1a222b"
-            palettes="@(new string[]{"#54ffa9", "#ffe91a"})">
+                       palettes="@(new string[]{"#54ffa9", "#ffe91a"})">
                 <e-chart-primaryxaxis valueType="Category">
                     <e-majorgridlines width="0"></e-majorgridlines>
                     <e-majorticklines width="0"></e-majorticklines>
@@ -93,15 +93,35 @@
 
                 <e-series-collection>
                     <e-series dataSource="@ViewBag.SplineChartData" xName="day" width="3"
-                        yName="income" name="Income" type="@Syncfusion.EJ2.Charts.ChartSeriesType.Spline"></e-series>
+                              yName="income" name="Income" type="@Syncfusion.EJ2.Charts.ChartSeriesType.Spline"></e-series>
                     <e-series dataSource="@ViewBag.SplineChartData" xName="day" width="3"
-                        yName="expense" name="Expense" type="@Syncfusion.EJ2.Charts.ChartSeriesType.Spline"></e-series>
+                              yName="expense" name="Expense" type="@Syncfusion.EJ2.Charts.ChartSeriesType.Spline"></e-series>
                 </e-series-collection>
-                 <e-chart-legendsettings position="Top" alignment=Far toggleVisibility="false">
+                <e-chart-legendsettings position="Top" alignment=Far toggleVisibility="false">
                     <e-legendsettings-textstyle color="#fff" size="1rem"></e-legendsettings-textstyle>
                 </e-chart-legendsettings>
                 <e-chart-tooltipsettings enable shared></e-chart-tooltipsettings>
             </ejs-chart>
+        </div>
+    </div>
+</div>
+
+@*Recent Transactions and More*@
+<div class="row">
+    <div class="col-md-6">
+        <div class="widget">
+            <div class="p-4">
+                <h5 class="fw-bold">Recent Transactions</h5>
+            </div>
+            <div class="px-4 pb-4">
+                <ejs-grid id="recent-transactions" dataSource="@ViewBag.RecentTransactions" gridLines="None">
+                    <e-grid-columns>
+                        <e-grid-column headerText="Category" field="CategoryTitleWithIcon"></e-grid-column>
+                        <e-grid-column headerText="Date" field="Date" width="110px" type="date" format="MMM-dd-yy" textAlign="Left"></e-grid-column>
+                        <e-grid-column headerText="Amount" field="FormattedAmount" width="110px" textAlign="Right"></e-grid-column>
+                    </e-grid-columns>
+                </ejs-grid>
+            </div>
         </div>
     </div>
 </div>
