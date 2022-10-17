@@ -2,7 +2,31 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    List<Object> menuItems = new List<Object>();
+
+    menuItems.Add(new
+    {
+        text = "Categories",
+        url = "/Category",
+        iconCss = "fa-solid fa-folder-closed", 
+        items = new List<object>()
+        {
+            new { text = "Open" },
+            new { text = "Save" },
+            new { text = "Exit" }
+        }
+    });
+
+    menuItems.Add(new
+    {
+        text = "Transactions",
+        url = "/Transaction",
+        iconCss = "fa-solid fa-arrow-right-arrow-left", 
+    });
 }
 
-<ejs-sidebar id="sidebar" width="290px">
+<ejs-sidebar id="sidebar" width="280px">
+    <e-content-template>
+        <ejs-menu id="menu" items="menuItems" orientation="Vertical" hamburgerMode></ejs-menu>
+    </e-content-template>
 </ejs-sidebar>
