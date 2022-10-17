@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0PwHHY86tFVptSEF0oHCzP12mqcGJ27oEc8Bi1EF58g=",
+  "Hash": "CTV/yVRVPjk/+g90i0LtYLzFsGz5hzrkJCTch6hZIiA=",
   "Source": "Xpense App",
   "BasePath": "_content/Xpense App",
   "Mode": "Default",
@@ -1103,6 +1103,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\SE\\Projects\\xpense-app\\Xpense App\\Xpense App\\wwwroot\\logo.png",
+      "SourceId": "Xpense App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SE\\Projects\\xpense-app\\Xpense App\\Xpense App\\wwwroot\\",
+      "BasePath": "_content/Xpense App",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.png"
+    },
+    {
+      "Identity": "D:\\SE\\Projects\\xpense-app\\Xpense App\\Xpense App\\wwwroot\\user.jpg",
+      "SourceId": "Xpense App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SE\\Projects\\xpense-app\\Xpense App\\Xpense App\\wwwroot\\",
+      "BasePath": "_content/Xpense App",
+      "RelativePath": "user.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user.jpg"
     }
   ]
 }
