@@ -85,6 +85,7 @@
                 <e-chart-primaryyaxis>
                     <e-majorgridlines width="1" color="#32414d" dashArray="3,5"></e-majorgridlines>
                     <e-majorticklines width="0"></e-majorticklines>
+                    <e-linestyle width="0"></e-linestyle>
                 </e-chart-primaryyaxis>
                 <e-chart-chartarea>
                     <e-chartarea-border width="0"></e-chartarea-border>
@@ -96,6 +97,10 @@
                     <e-series dataSource="@ViewBag.SplineChartData" xName="day" width="3"
                         yName="expense" name="Expense" type="@Syncfusion.EJ2.Charts.ChartSeriesType.Spline"></e-series>
                 </e-series-collection>
+                 <e-chart-legendsettings position="Top" alignment=Far toggleVisibility="false">
+                    <e-legendsettings-textstyle color="#fff" size="1rem"></e-legendsettings-textstyle>
+                </e-chart-legendsettings>
+                <e-chart-tooltipsettings enable shared></e-chart-tooltipsettings>
             </ejs-chart>
         </div>
     </div>
