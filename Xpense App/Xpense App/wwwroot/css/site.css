@@ -19,9 +19,10 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-  background-color: #12161d;
-  color: #fff;
+    margin-bottom: 60px;
+    background-color: #12161d;
+    color: #fff;
+    overflow: hidden;
 }
 
 .e-bigger {
@@ -30,6 +31,8 @@ body {
 
 .main-content {
     margin-left: 290px;
+    overflow-y:auto;
+    height:92vh;
 }
 
 /*BreadCrumb*/
@@ -257,6 +260,7 @@ img.profile-pic {
     background-color: #12161d;
     border-right: 1px dashed rgba(75, 82, 85, 0.24);
     padding: 10px 20px;
+    overflow:hidden;
 }
 
 #sidebar .e-menu-wrapper{
