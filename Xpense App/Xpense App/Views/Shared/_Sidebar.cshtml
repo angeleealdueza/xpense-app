@@ -3,6 +3,18 @@
 *@
 @{
     List<Object> menuItems = new List<Object>();
+    menuItems.Add(new
+    {
+        text = "General",
+        separator=true
+    });
+
+    menuItems.Add(new
+    {
+        text = "Dashboard",
+        url = "/",
+        iconCss = "fa-solid fa-box", 
+    });
 
     menuItems.Add(new
     {
@@ -22,6 +34,26 @@
         text = "Transactions",
         url = "/Transaction",
         iconCss = "fa-solid fa-arrow-right-arrow-left", 
+    });
+
+    menuItems.Add(new
+    {
+        text = "Extras",
+        separator=true
+    });
+
+    menuItems.Add(new
+    {
+        text = "Reports",
+        url = "#",
+        iconCss = "fa-solid fa-chart-simple", 
+    });
+
+    menuItems.Add(new
+    {
+        text = "Settings",
+        url = "#",
+        iconCss = "fa-solid fa-gear", 
     });
 }
 
